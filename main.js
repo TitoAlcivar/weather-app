@@ -1,5 +1,5 @@
-const form = document.getElementById('weatherForm');
-const weatherInfo = document.getElementById('weatherInfo');
+const form = document.querySelector('#weatherForm');
+const weatherInfo = document.querySelector('#weatherInfo');
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
