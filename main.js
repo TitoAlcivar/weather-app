@@ -3,7 +3,7 @@ const weatherInfo = document.querySelector('#weatherInfo');
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-    const city = document.getElementById('cityInput').value;
+    const city = document.querySelector('#cityInput').value;
     getWeather(city);
 });
 
@@ -32,14 +32,13 @@ function displayWeather(data) {
     // weatherInfo.innerHTML += `<div class = "weather-container"
     //                           <h2>${cityName}</h2>
     //                           <p>Temperatura: ${temperature}</p>
-    //                           <img src = ${weatherIcon}>
     //                           <p> Velocidad del viento: ${windSpeed} m/s >`
 
     const weatherContainer = document.createElement('div');
     weatherContainer.classList.add('weather-container');
 
     const cityElement = document.createElement('h2');
-    cityElement.textContent = ` ${cityName}`;
+    cityElement.textContent = `${cityName}`;
 
     const temperatureElement = document.createElement('p');
     temperatureElement.innerHTML = `Temperatura: ${temperature}°C`;
