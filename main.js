@@ -8,9 +8,7 @@ form.addEventListener('submit', function(event) {
 });
 
 function getWeather(city) {
-
-    const apiKey = 'd564f5a436cdf8abc6015c18b52129a2';
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d564f5a436cdf8abc6015c18b52129a2&units=metric`;
 
     weatherInfo.innerHTML = '';
 
@@ -30,6 +28,12 @@ function displayWeather(data) {
     const temperature = data.main.temp;
     const weatherIcon = data.weather[0].icon;
     const windSpeed = data.wind.speed;
+
+    // weatherInfo.innerHTML += `<div class = "weather-container"
+    //                           <h2>${cityName}</h2>
+    //                           <p>Temperatura: ${temperature}</p>
+    //                           <img src = ${weatherIcon}>
+    //                           <p> Velocidad del viento: ${windSpeed} m/s >`
 
     const weatherContainer = document.createElement('div');
     weatherContainer.classList.add('weather-container');
